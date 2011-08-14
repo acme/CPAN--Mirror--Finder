@@ -51,7 +51,7 @@ sub find_all_mirrors {
         $self->find_cpan_mirrors, $self->find_cpanplus_mirrors );
 }
 
-=head1 find_cpanmini_mirrors
+=head2 find_cpanmini_mirrors
 
 Returns a local CPAN::Mini mirror, if any:
 
@@ -68,7 +68,7 @@ sub find_cpanmini_mirrors {
     return URI::file->new($directory);
 }
 
-=head1 find_cpan_mirrors
+=head2 find_cpan_mirrors
 
 Returns the mirrors configured by CPAN.pm:
 
@@ -83,7 +83,7 @@ sub find_cpan_mirrors {
     return map { URI->new($_) } @{ $CPAN::Config->{urllist} || [] };
 }
 
-=head1 find_cpanplus_mirrors
+=head2 find_cpanplus_mirrors
 
 Returns the mirrors configured by CPANPLUS:
 
@@ -107,3 +107,16 @@ sub find_cpanplus_mirrors {
 }
 
 1;
+
+=head1 AUTHOR
+
+Leon Brocard <acme@astray.com>.
+
+=head1 COPYRIGHT
+
+Copyright (C) 2011, Leon Brocard
+
+=head1 LICENSE
+
+This module is free software; you can redistribute it or modify it
+under the same terms as Perl itself.
