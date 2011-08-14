@@ -4,6 +4,7 @@ use warnings;
 use Moo;
 use URI;
 use URI::file;
+our $VERSION = '0.01';
 
 =head1 NAME
 
