@@ -14,22 +14,22 @@ my $build = Module::Build->new(
 
 #            bugtracker => {
 #                mailto => 'bug-JSON-YAJL@rt.cpan.org',
-#                web => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=CPAN-Mirror-Find',
+#                web => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=CPAN-Mirror-Finder',
 #            },
-            homepage => 'http://search.cpan.org/dist/CPAN-Mirror-Find/',
+            homepage => 'http://search.cpan.org/dist/CPAN-Mirror-Finder/',
 
-         #            repository => {
-         #                type => 'git',
-         #                web  => 'git@github.com:acme/CPAN-Mirror--Find.git',
-         #                url  => 'https://github.com/acme/CPAN-Mirror-Find',
-         #            },
+       #            repository => {
+       #                type => 'git',
+       #                web  => 'git@github.com:acme/CPAN-Mirror--Finder.git',
+       #                url  => 'https://github.com/acme/CPAN-Mirror-Finder',
+       #            },
         },
     },
     'meta-spec' => {
         version => '2',
         url     => 'http://search.cpan.org/perldoc?CPAN::Meta::Spec',
     },
-    module_name => 'CPAN::Mirror::Find',
+    module_name => 'CPAN::Mirror::Finder',
     requires    => { 'Moo' => 0, 'URI' => 0 },
     sign        => 1,
 );
