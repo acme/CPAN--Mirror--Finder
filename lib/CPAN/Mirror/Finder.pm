@@ -1,4 +1,4 @@
-package CPAN::Mirror::Find;
+package CPAN::Mirror::Finder;
 use strict;
 use warnings;
 use Moo;
@@ -7,19 +7,17 @@ use URI::file;
 
 =head1 NAME
 
-CPAN::Mirror::Find - Find a locally-configured CPAN mirror
+CPAN::Mirror::Finder - Find a locally-configured CPAN mirror
 
 =head1 SYNOPSIS
 
-  use CPAN::Mirror::Find;
-  my $find = CPAN::Mirror::Find->new;
-  my @mirrors = $find->find_all_mirrors;
+  use CPAN::Mirror::Finder;
+  my $finder = CPAN::Mirror::Finder->new;
+  my @mirrors = $finder->find_all_mirrors;
 
-  my @cpanmini_mirrors = $find->find_cpanmini_mirrors;
-  my @cpan_mirrors = $find->find_cpan_mirrors;
-  my @cpanplus_mirrors = $find->find_cpanplus_mirrors;
-
-TODO: Rename to Finder
+  my @cpanmini_mirrors = $finder->find_cpanmini_mirrors;
+  my @cpan_mirrors = $finder->find_cpan_mirrors;
+  my @cpanplus_mirrors = $finder->find_cpanplus_mirrors;
 
 =head1 DESCRIPTION
 
@@ -43,7 +41,7 @@ All methods return URI objects.
 Returns a combination of all the ways of finding locally-configured
 CPAN mirror:
 
-  my @mirrors = $find->find_mirror; # returns all the following
+  my @mirrors = $finder->find_mirror; # returns all the following
 
 =cut
 
@@ -57,7 +55,7 @@ sub find_all_mirrors {
 
 Returns a local CPAN::Mini mirror, if any:
 
-  my @cpanmini_mirrors = $find->find_cpanmini_mirrors;
+  my @cpanmini_mirrors = $finder->find_cpanmini_mirrors;
 
 =cut
 
@@ -74,7 +72,7 @@ sub find_cpanmini_mirrors {
 
 Returns the mirrors configured by CPAN.pm:
 
-  my @cpan_mirrors = $find->find_cpan_mirrors;
+  my @cpan_mirrors = $finder->find_cpan_mirrors;
 
 =cut
 
@@ -89,7 +87,7 @@ sub find_cpan_mirrors {
 
 Returns the mirrors configured by CPANPLUS:
 
-  my @cpanplus_mirrors = $find->find_cpanplus_mirrors;
+  my @cpanplus_mirrors = $finder->find_cpanplus_mirrors;
 
 =cut
 
